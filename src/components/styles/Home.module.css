@@ -1,0 +1,36 @@
+.title {
+    font-size: 28px;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    color: rgb(0, 0, 0);
+    margin-bottom: 30px;
+}
+
+
+
+.list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgb(154, 136, 136);
+    cursor: pointer;
+}
+
+.movieTitle {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+    color: rgb(0, 0, 0);
+}
+
