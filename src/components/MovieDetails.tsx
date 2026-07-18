@@ -1,11 +1,10 @@
 import styles from './styles/MovieDetails.module.css'
-import { useContext, useEffect, useState } from 'react'
-import axios from 'axios'
+import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom';
 import { MovieContext } from "./MovieContext";
 import { Link } from 'react-router-dom';
 
-const MovieDetails = () => {
+const MovieDetails: React.FC = () => {
     const { movieId } = useParams()
     const { movies } = useContext(MovieContext)
     const movie = movies.find(movie => movie.id === Number(movieId));

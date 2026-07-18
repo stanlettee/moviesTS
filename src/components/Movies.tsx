@@ -1,18 +1,26 @@
 import styles from './styles/Movies.module.css'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
-import { MovieContext } from "./MovieContext";
+
+import { MovieContext } from './MovieContext'
 import { useContext } from 'react';
 
-const Movies = () => {
+const Movies:React.FC = () => {
   const { setMovies, movies } = useContext(MovieContext);
   const [search, setSearch] = useState('')
   const apiKey = '71c3daa9589b3ba88d7c5d90ff9276b7'
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setSearch(e.target.elements.input.value)
+
+    const target = e.currentTarget as HTMLFormElement & {
+    elements: {
+      input: HTMLInputElement;
+    };
+  };
+
+  setSearch(target.elements.input.value);
   }
 
   useEffect(() => {

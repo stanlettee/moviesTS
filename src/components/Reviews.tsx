@@ -1,9 +1,9 @@
 import styles from './styles/Reviews.module.css'
 import { useParams } from 'react-router-dom'
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import { MovieContext } from './MovieContext'
 
-const Reviews = () => {
+const Reviews: React.FC = () => {
     const { movieId } = useParams()
     const { movies } = useContext(MovieContext)
     const movie = movies.find(movie => movie.id === Number(movieId));

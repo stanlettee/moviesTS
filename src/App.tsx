@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route, NavLink, Link } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 // import { Home } from "./components/Home"
 // import { Movies } from './components/Movies'
 // import { MovieDetails } from './components/MovieDetails'
@@ -7,12 +7,10 @@ import { Routes, Route, NavLink, Link } from "react-router-dom";
 // import { MovieDetails } from './components/MovieDetails'
 // import { Cast } from './components/Cast'
 // import { NotFound } from './components/NotFound'
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+
 import { MovieProvider } from "./components/MovieContext";
 import { lazy } from 'react';
 import { Suspense } from 'react';
-import { Audio } from 'react-loader-spinner'
 import { ThreeDots } from 'react-loader-spinner'
 
 const Home = lazy(() => 
@@ -39,8 +37,7 @@ const Reviews = lazy(() =>
   import('./components/Reviews')
 )
 
-function App() {
-    const [tranding, setTranding] = useState([])
+const App: React.FC = () => {
     
 
   return (

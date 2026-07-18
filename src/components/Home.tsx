@@ -2,7 +2,7 @@ import styles from './styles/Home.module.css'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const Home = () => {
+const Home:React.FC = () => {
     const [tranding, setTranding] = useState([])
     const apiKey = '71c3daa9589b3ba88d7c5d90ff9276b7'
     useEffect(() => {
